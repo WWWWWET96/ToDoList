@@ -8,6 +8,6 @@ function paintGreetings(username){
 paintGreetings(savedUsername);
 
 if(savedUsername ===null){
-   location.href= "file:///C:/momentum/frontend/html/index.html";
+   location.href= "../html/index.html";
 
 }

@@ -7,9 +7,17 @@ function onLoginSubmit(event){
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
   
-    location.href = "/momentum/frontend/html/todo.html";
+    location.href = "../html/todo.html";
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
 
-
+fetch("http://localhost:8080/api/login",{
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        name: "kim",
+    }),
+}).then((response) => console.log(response));
